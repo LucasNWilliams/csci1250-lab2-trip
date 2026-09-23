@@ -15,13 +15,13 @@ double milesPerGallon;
 decimal pricePerGallon;
 
 // Get values about the trip itself
-Console.WriteLine("How many miles is the round trip?");
+Console.Write("How many miles is the round trip?        ");
 tripTotalMiles = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("What is the miles per gallon of the car?");
+Console.Write("What is the miles per gallon of the car? ");
 milesPerGallon = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("What is the price per gallon?");
+Console.Write("What is the price per gallon?            ");
 pricePerGallon = Convert.ToDecimal(Console.ReadLine());
 
 // Calculate fuel needs and costs
@@ -30,7 +30,7 @@ decimal fuelCost = (decimal)gallonsNeeded * pricePerGallon;
 
 // Tell user the gallons needed and the cost
 Console.WriteLine("\nGallons Needed: " + gallonsNeeded.ToString("F2"));
-Console.WriteLine("Fuel Cost: " + fuelCost.ToString("C"));
+Console.WriteLine("Fuel Cost:      " + fuelCost.ToString("C"));
 
 
 // Part 2 //
@@ -43,13 +43,13 @@ int totalPizza;
 decimal pricePerPizza;
 
 // Get information about attendence and pizza quantity and price
-Console.WriteLine("How many people are going?");
+Console.Write("How many people are going?        ");
 totalPeople = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("How many pizzas are you ordering?");
+Console.Write("How many pizzas are you ordering? ");
 totalPizza = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("What is the price of a pizza?");
+Console.Write("What is the price of a pizza?     ");
 pricePerPizza = Convert.ToDecimal(Console.ReadLine());
 
 // Calculate costs for pizza and distribution to each attendee
@@ -58,9 +58,9 @@ double slicesPerPerson = (double)totalSlices / totalPeople;
 decimal pizzaCost = totalPizza * pricePerPizza;
 
 // Tell user the results
-Console.WriteLine("\nTotal Slices: " + totalSlices);
+Console.WriteLine("\nTotal Slices:      " + totalSlices);
 Console.WriteLine("Slices per Person: " + slicesPerPerson.ToString("F1"));
-Console.WriteLine("Pizza Cost: " + pizzaCost.ToString("C"));
+Console.WriteLine("Pizza Cost:        " + pizzaCost.ToString("C"));
 
 
 // Part 3 //
@@ -72,10 +72,10 @@ int weeklyHoursWorked;
 decimal hourlyRate;
 
 // Ask hours worked and hourly rate
-Console.WriteLine("How many hours did you work this week?");
+Console.Write("How many hours did you work this week? ");
 weeklyHoursWorked = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("What is your hourly rate?");
+Console.Write("What is your hourly rate?              ");
 hourlyRate = Convert.ToDecimal(Console.ReadLine());
 
 // Calculate gross and net pay with taxes
@@ -84,8 +84,8 @@ decimal taxWithheld = grossPay * TAX_RATE;
 decimal takeHomePay = grossPay - taxWithheld;
 
 // Tell the user their gross and net earnings and their taxes for their work for the week
-Console.WriteLine("\nGross Pay: " + grossPay.ToString("C"));
-Console.WriteLine("Tax Withheld: " + taxWithheld.ToString("C"));
+Console.WriteLine("\nGross Pay:     " + grossPay.ToString("C"));
+Console.WriteLine("Tax Withheld:  " + taxWithheld.ToString("C"));
 Console.WriteLine("Take-home Pay: " + takeHomePay.ToString("C"));
 
 
@@ -99,9 +99,9 @@ decimal takeHomePayPerHour = takeHomePay / weeklyHoursWorked;
 double hoursOfWorkNeeded = (double)(costPerPerson / takeHomePayPerHour);
 
 // Tell the user the final cost for the trip and individual, as well as hours of work needed to pay for the trip
-Console.WriteLine("Trip total: " + tripTotal.ToString("C"));
-Console.WriteLine("Cost per person: " + costPerPerson.ToString("C"));
-Console.WriteLine("Take home pay per hour: " + takeHomePayPerHour.ToString("C"));
+Console.WriteLine("Trip total:                              " + tripTotal.ToString("C"));
+Console.WriteLine("Cost per person:                         " + costPerPerson.ToString("C"));
+Console.WriteLine("Take home pay per hour:                  " + takeHomePayPerHour.ToString("C"));
 Console.WriteLine("Hours you must work to cover your share: " + hoursOfWorkNeeded.ToString("F2"));
 
 
