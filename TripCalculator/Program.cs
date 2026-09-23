@@ -14,7 +14,7 @@ int tripTotalMiles;
 double milesPerGallon;
 decimal pricePerGallon;
 
-// Get values for about the trip itself
+// Get values about the trip itself
 Console.WriteLine("How many miles is the round trip?");
 tripTotalMiles = Convert.ToInt32(Console.ReadLine());
 
