@@ -1,10 +1,11 @@
-﻿// Part 1
+﻿// Part 1 //
+
 int tripTotalMiles;
 double milesPerGallon;
 decimal pricePerGallon;
 
 // Get variable values
-Console.WriteLine("How many miles is the round trip?");
+Console.WriteLine("\nHow many miles is the round trip?");
 tripTotalMiles = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("What is the miles per gallon of the car?");
@@ -21,3 +22,33 @@ decimal fuelCost = (decimal)gallonsNeeded * pricePerGallon;
 Console.WriteLine("Gallons Needed: " + gallonsNeeded.ToString("F2") + "(9.29)");
 Console.WriteLine("Fuel Cost: " + fuelCost.ToString("C") + "($26.84)");
 
+
+// Part 2 //
+
+int totalPeople;
+int totalPizza;
+decimal pricePerPizza;
+const int SLICES_PER_PIZZA = 8;
+
+// Ask more questions
+Console.WriteLine("\nHow many people are going?");
+totalPeople = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("How many pizzas are you ordering?");
+totalPizza = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("What is the price of a pizza?");
+pricePerPizza = Convert.ToDecimal(Console.ReadLine());
+
+// Calculate values
+int totalSlices = totalPizza * SLICES_PER_PIZZA;
+double slicesPerPerson = (double)totalSlices / totalPeople;
+decimal pizzaCost = totalPizza * pricePerPizza;
+
+// Tell user the results
+Console.WriteLine("Total Slices: " + totalSlices + "(24)");
+Console.WriteLine("Slices per Person: " + slicesPerPerson.ToString("F1") + "(4.8)");
+Console.WriteLine("Pizza Cost: " + pizzaCost.ToString("C") + "($38.97)");
+
+// Extra line to separate instances in terminal
+Console.WriteLine();
