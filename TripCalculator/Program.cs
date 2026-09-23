@@ -1,11 +1,21 @@
-﻿// Part 1 //
+﻿/*
+ * Name:        Lucas Williams
+ * Course:      CSCI 1250, Section 002
+ * Assignment:  Lab 02, Trip Calculator
+ * Date:        September 23, 2026
+ * Description: Calculates the fuel, food, and work hours behind one road trip.
+*/
 
+// Part 1 //
+Console.WriteLine("\n=== Part 1: Road Trip ===");
+
+// Starting variables for part 1
 int tripTotalMiles;
 double milesPerGallon;
 decimal pricePerGallon;
 
 // Get variable values
-Console.WriteLine("\nHow many miles is the round trip?");
+Console.WriteLine("How many miles is the round trip?");
 tripTotalMiles = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("What is the miles per gallon of the car?");
@@ -24,14 +34,16 @@ Console.WriteLine("Fuel Cost: " + fuelCost.ToString("C") + "($26.84)");
 
 
 // Part 2 //
+Console.WriteLine("\n=== Part 2: Pizza Party ===");
 
+// Starting variables for part 2
+const int SLICES_PER_PIZZA = 8;
 int totalPeople;
 int totalPizza;
 decimal pricePerPizza;
-const int SLICES_PER_PIZZA = 8;
 
 // Ask more questions
-Console.WriteLine("\nHow many people are going?");
+Console.WriteLine("How many people are going?");
 totalPeople = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("How many pizzas are you ordering?");
@@ -52,13 +64,15 @@ Console.WriteLine("Pizza Cost: " + pizzaCost.ToString("C") + "($38.97)");
 
 
 // Part 3 //
+Console.WriteLine("\n=== Part 3: Paycheck ===");
 
+// Starting variables for part 3
+const decimal TAX_RATE = .18M;
 int weeklyHoursWorked;
 decimal hourlyRate;
-const decimal TAX_RATE = .18M;
 
 // Ask even more questions
-Console.WriteLine("\nHow many hours did you work this week?");
+Console.WriteLine("How many hours did you work this week?");
 weeklyHoursWorked = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("What is your hourly rate?");
@@ -75,6 +89,20 @@ Console.WriteLine("Tax Withheld: " + taxWithheld.ToString("C") + "($53.46)");
 Console.WriteLine("Take-home Pay: " + takeHomePay.ToString("C") + "($243.54)");
 
 
+// Part 4 //
+Console.WriteLine("\n=== Part 4: The Whole Trip ===");
+
+// Calculate final values
+decimal tripTotal = fuelCost + pizzaCost;
+decimal costPerPerson = tripTotal / totalPeople;
+decimal takeHomePayPerHour = takeHomePay / weeklyHoursWorked;
+double hoursOfWorkNeeded = (double)(costPerPerson / takeHomePayPerHour);
+
+// Give the final values
+Console.WriteLine("Trip total: " + tripTotal.ToString("C") + "($65.81)");
+Console.WriteLine("Cost per person: " + costPerPerson.ToString("C") + "($13.16)");
+Console.WriteLine("Take home pay per hour: " + takeHomePayPerHour.ToString("C") + "($11.07)");
+Console.WriteLine("Hours you must work to cover your share: " + hoursOfWorkNeeded.ToString("F2") + "(1.19)");
 
 
 // Extra line to separate instances in terminal
